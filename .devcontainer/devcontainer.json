@@ -1,0 +1,16 @@
+{
+  "name": "hackathon2 c++ cs103 fall26",
+  "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+  "containerEnv": { "DISPLAY": ":1" },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": { "label": "Desktop", "onAutoForward": "openBrowser" }
+  },
+  "onCreateCommand": "sudo apt-get update && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libasound2-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev libwayland-dev libxkbcommon-dev",
+  "customizations": {
+    "vscode": { "extensions": ["ms-vscode.cmake-tools", "ms-vscode.cpptools"] }
+  }
+}
